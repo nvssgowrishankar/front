@@ -1,0 +1,10 @@
+<div class="home-container">
+    <button (click)="toggleLoginOptions()" class="login-button">Login</button>
+  
+    <div *ngIf="showLoginOptions" class="login-options">
+      <button (click)="navigateToLogin('customer')" class="option-button">Customer Login</button>
+      <button (click)="navigateToLogin('driver')" class="option-button">Driver Login</button>
+      <button (click)="navigateToLogin('admin')" class="option-button">Admin Login</button>
+    </div>
+  </div>
+  

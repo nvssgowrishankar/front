@@ -1,0 +1,22 @@
+<div class="registration-container">
+    <form (ngSubmit)="register()" #registrationForm="ngForm">
+      <!-- Common Customer details -->
+      <input *ngIf="role === 'customer'" type="text" name="username" [(ngModel)]="customer.username" placeholder="Username" required>
+      <input *ngIf="role === 'customer'" type="email" name="email" [(ngModel)]="customer.email" placeholder="Email" required>
+      <input *ngIf="role === 'customer'" type="text" name="address" [(ngModel)]="customer.address" placeholder="Address" required>
+      <input *ngIf="role === 'customer'" type="text" name="mobileNumber" [(ngModel)]="customer.mobileNumber" placeholder="Mobile Number" required>
+      <input *ngIf="role === 'customer'" type="password" name="password" [(ngModel)]="customer.password" placeholder="Password" required>
+  
+      <!-- Driver details -->
+      <select *ngIf="role === 'driver'" name="driver" [(ngModel)]="selectedDriverId" required>
+        <option *ngFor="let driver of drivers" [value]="driver.driverId">{{ driver.username }}</option>
+      </select>
+    
+      <!-- Cab details -->
+      <input *ngIf="role === 'driver'" type="text" name="cabModel" [(ngModel)]="cab.model" placeholder="Cab Model" required>
+      <input *ngIf="role === 'driver'" type="number" name="cabPrice" [(ngModel)]="cab.price" placeholder="Cab Price" required>
+    
+      <button type="submit">Register</button>
+    </form>
+  </div>
+  

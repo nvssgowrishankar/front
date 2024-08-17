@@ -1,0 +1,21 @@
+.home-container {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  .login-button {
+    padding: 10px 20px;
+    font-size: 18px;
+  }
+  
+  .login-options {
+    margin-top: 20px;
+  }
+  
+  .option-button {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+  

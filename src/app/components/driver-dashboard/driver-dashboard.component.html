@@ -1,0 +1,9 @@
+<h2>Driver Dashboard</h2>
+<div>
+  <h3>Top Drivers</h3>
+  <ul>
+    <li *ngFor="let driver of drivers">
+      {{ driver.username }} - Rating: {{ driver.rating }}
+    </li>
+  </ul>
+</div>

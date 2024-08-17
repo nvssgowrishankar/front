@@ -1,0 +1,15 @@
+<h2>Book a Trip</h2>
+<form (ngSubmit)="bookTrip()">
+  <label for="pickupLocation">Pickup Location:</label>
+  <input id="pickupLocation" [(ngModel)]="tripBooking.pickupLocation" name="pickupLocation" required>
+  
+  <label for="dropoffLocation">Dropoff Location:</label>
+  <input id="dropoffLocation" [(ngModel)]="tripBooking.dropoffLocation" name="dropoffLocation" required>
+  
+  <label for="perKmRate">Rate per Km:</label>
+  <input id="perKmRate" [(ngModel)]="tripBooking.perKmRate" name="perKmRate" type="number" required>
+  
+  <button type="submit">Book Trip</button>
+  <p *ngIf="successMessage">{{ successMessage }}</p>
+  <p *ngIf="errorMessage">{{ errorMessage }}</p>
+</form>

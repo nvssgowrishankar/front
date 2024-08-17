@@ -1,0 +1,12 @@
+<h2>Customer Dashboard</h2>
+<div>
+  <h3>Available Cabs</h3>
+  <ul>
+    <li *ngFor="let cab of cabs">
+      {{ cab.carType }} - {{ cab.perKmRate }} per km
+      <button (click)="bookCab()">Book</button>
+    </li>
+  </ul>
+  <p *ngIf="successMessage">{{ successMessage }}</p>
+  <p *ngIf="errorMessage">{{ errorMessage }}</p>
+</div>
